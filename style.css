@@ -20,7 +20,7 @@ body {
 }
 
 @media only screen and (max-width: 1200px) {
-  #imgcont {
+  #imgcont, #weather {
     display: none;
   }
   #table {
