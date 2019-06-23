@@ -7,11 +7,13 @@
   </head>
   <body>
     <noscript><style>
-      #bar {
+      #bar, #search {
         display: none;
       }
+      #container {
+        margin-top: -4em;
+      }
     </style></noscript>
-    <audio crossorigin="anonymous" id="player" src="https://lainon.life/radio/cyberia.ogg" autoplay="true"></audio>
     <table id="table" style="width:100%">
       <tbody>
         <tr>
@@ -70,6 +72,7 @@
         </tr>
       </tbody>
     </table>
+    <audio crossorigin="anonymous" id="player" src="https://lainon.life/radio/cyberia.ogg" autoplay="true" controls></audio>
     <div id="bar">
       <table id="table2" style="width:100%">
         <tbody>

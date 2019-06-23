@@ -6,6 +6,8 @@ const c = document.getElementById("clock");
 const w = document.getElementById("weather");
 var isSearch = true;
 
+p.controls = false;
+
 document.addEventListener("DOMContentLoaded", function() {
 	getWeather();
   s.value = "";
