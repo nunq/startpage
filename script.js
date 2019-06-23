@@ -41,7 +41,7 @@ function keyHandler(e) {
     if(isSearch) {
       window.location.href = "https://duckduckgo.com/?q=" + this.value;
     } else {
-      window.location.href = "https://" + this.value;
+      window.location.href = this.value;
     }
   }
 }
