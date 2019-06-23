@@ -1,27 +1,59 @@
-const player = document.getElementById("player");
-const w = document.getElementById("weather");
-const c = document.getElementById("clock");
+"use strict";
 
-document.addEventListener('DOMContentLoaded', function() {
+const p = document.getElementById("player");
+const s = document.getElementById("search");
+const c = document.getElementById("clock");
+const w = document.getElementById("weather");
+var isSearch = true;
+
+document.addEventListener("DOMContentLoaded", function() {
 	getWeather();
+  s.value = "";
 }, false);
 
 function reload() {
 	var url = document.getElementById("selection").value;
-	player.src = url;
-  player.load();
-  player.play();
+	p.src = url;
+  p.load();
+  p.play();
 }
 
+if(s.addEventListener ) {
+  s.addEventListener("keydown", this.keyHandler, false);
+}
+
+function keyHandler(e) {
+  if(e.keyCode === 9) {
+    if(isSearch) {
+      isSearch = false;
+      this.placeholder = "type a url...";
+    } else if (!isSearch) {
+      isSearch = true;
+      this.placeholder = "search the web...";
+    }
+    if(e.preventDefault) {
+      e.preventDefault();
+    }
+  }
+  if(e.keyCode === 13) {
+    if(isSearch) {
+      window.location.href = "https://duckduckgo.com/?q=" + this.value;
+    } else {
+      window.location.href = "https://" + this.value;
+    }
+  }
+}
+
+
 function updateClock() {
-	var currentTime = new Date();
-	var currentHours = currentTime.getHours();
-	var currentMinutes = currentTime.getMinutes();
-	var currentSeconds = currentTime.getSeconds();
+	let currentTime = new Date();
+	let currentHours = currentTime.getHours();
+	let currentMinutes = currentTime.getMinutes();
+	let currentSeconds = currentTime.getSeconds();
 	currentHours = (currentHours < 10 ? "0" : "") + currentHours;
 	currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
 	currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
-	var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;
+	let currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;
 	c.innerHTML = currentTimeString;
 }
 

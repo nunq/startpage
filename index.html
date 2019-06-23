@@ -6,15 +6,20 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <audio id="player" src="https://lainon.life/radio/cyberia.ogg" autoplay="true"></audio>
+    <noscript><style>
+      #bar {
+        display: none;
+      }
+    </style></noscript>
+    <audio crossorigin="anonymous" id="player" src="https://lainon.life/radio/cyberia.ogg" autoplay="true"></audio>
     <table id="table" style="width:100%">
       <tbody>
         <tr>
           <td>
             <div class="left" id="searchbox">
-              <form method="get" action="https://duckduckgo.com/?">
-                <input name="q" id="search" type="text" placeholder="search..." autofocus>
-              </form>
+              <!-- <form id="form" method="get" action="https://duckduckgo.com/?">
+              </form> -->
+                <input id="search" type="text" placeholder="search the web..." autofocus>
             </div>
             <div class="left" id="container">
               <div id="links">
@@ -59,7 +64,7 @@
           </td>
           <td>
             <div id="imgcont">
-              <img id="image" src="" onclick="updateImage()">
+              <img id="image" src="img/12.jpg" onclick="updateImage()">
             </div>
           </td>
         </tr>
