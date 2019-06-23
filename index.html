@@ -1,104 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>/home/</title>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="utf-8">
-  </head>
-  <body>
-    <noscript><style>
-      #bar, #search {
-        display: none;
-      }
-      #container {
-        margin-top: -4em;
-      }
-    </style></noscript>
-    <table id="table" style="width:100%">
-      <tbody>
-        <tr>
-          <td>
-            <div class="left" id="searchbox">
-              <!-- <form id="form" method="get" action="https://duckduckgo.com/?">
-              </form> -->
-                <input id="search" type="text" placeholder="search the web..." autofocus>
-            </div>
-            <div class="left" id="container">
-              <div id="links">
-                <div class="col">
-                  <ul>
-                    <li>
-                      <p>productivity</p>
-                    </li>
-                    <li><a href="https://hyphen.ml/index.php/apps/tasks/#/collections/today">tasks</a></li>
-                    <li><a href="https://hyphen.ml/index.php/apps/notes">notes</a></li>
-                    <li><a href="https://hyphen.ml/index.php/apps/calendar/">calendar</a></li>
-                    <li><a href="https://github.com">github</a></li>
-                    <li><a href="https://hyphen.ml/index.php/apps/mail">mail</a></li>
-                  </ul>
-                </div>
-                <div class="col">
-                  <ul>
-                    <li>
-                      <p>media</p>
-                    </li>
-                    <li><a href="https://youtube.com">youtube</a></li>
-                    <li><a href="https://twitch.tv">twitch</a></li>
-                    <li><a href="https://netflix.com">netflix</a></li>
-                    <li><a href="https://web.whatsapp.com">whatsapp</a></li>
-                    <li><a href="https://hyphen.ml/index.php/apps/news/">news</a></li>
-                  </ul>
-                </div>
-                <div class="col">
-                  <ul>
-                    <li>
-                      <p>other</p>
-                    </li>
-                    <li><a href="https://0x0.st">null ptr</a></li>
-                    <li><a href="https://ix.io">ix.io</a></li>
-                    <li><a href="https://noez.de">noez</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/u/0/">sheets</a></li>
-                    <li><a href="https://fast.com">fast</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </td>
-          <td>
-            <div id="imgcont">
-              <img id="image" src="img/12.jpg" onclick="updateImage()">
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <audio id="player" src="https://lainon.life/radio/cyberia.ogg" controls></audio>
-    <div id="bar">
-      <table id="table2" style="width:100%">
-        <tbody>
-          <tr>
-            <td class="bottomtd">
-              <!-- music -->
-            <span style="margin-left: 10px;">channel: </span>
-            <select id="selection">
-              <option value="http://cyberadio.pw:8000/stream">cyberadio</option>
-              <option value="https://lainon.life/radio/cafe.ogg">lainon/cafe</option>
-              <option value="https://lainon.life/radio/cyberia.ogg" selected>lainon/cyberia</option>
-              <option value="https://lainon.life/radio/everything.ogg">lainon/everything</option>
-            </select>
-            <button onclick="player.play()">play</button>
-            <button onclick="player.pause()">pause</button>
-            <button onclick="reload()">reload</button>
-            </td>
-            <td class="bottomtd" style="text-align: right";>
-              <!-- weather and time -->
-              <span id="weather"></span>
-              <span style="margin-right: 10px;" id="clock"></span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <script src="script.js"></script>
-  </body>
+	<head>
+		<title>/home/</title>
+		<link rel="stylesheet" href="style.css">
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<noscript><style>
+			#bar, #search {
+				display: none;
+			}
+			#container {
+				margin-top: -4em;
+			}
+		</style></noscript>
+		<table id="table" style="width:100%">
+			<tbody>
+				<tr>
+					<td>
+						<div class="left" id="searchbox">
+							<!-- <form id="form" method="get" action="https://duckduckgo.com/?">
+							</form> -->
+								<input id="search" type="text" placeholder="search the web..." autofocus>
+						</div>
+						<div class="left" id="container">
+							<div id="links">
+								<div class="col">
+									<ul>
+										<li>
+											<p>productivity</p>
+										</li>
+										<li><a href="https://hyphen.ml/index.php/apps/tasks/#/collections/today">tasks</a></li>
+										<li><a href="https://hyphen.ml/index.php/apps/notes">notes</a></li>
+										<li><a href="https://hyphen.ml/index.php/apps/calendar/">calendar</a></li>
+										<li><a href="https://github.com">github</a></li>
+										<li><a href="https://hyphen.ml/index.php/apps/mail">mail</a></li>
+									</ul>
+								</div>
+								<div class="col">
+									<ul>
+										<li>
+											<p>media</p>
+										</li>
+										<li><a href="https://youtube.com">youtube</a></li>
+										<li><a href="https://twitch.tv">twitch</a></li>
+										<li><a href="https://netflix.com">netflix</a></li>
+										<li><a href="https://web.whatsapp.com">whatsapp</a></li>
+										<li><a href="https://hyphen.ml/index.php/apps/news/">news</a></li>
+									</ul>
+								</div>
+								<div class="col">
+									<ul>
+										<li>
+											<p>other</p>
+										</li>
+										<li><a href="https://0x0.st">null ptr</a></li>
+										<li><a href="http://ix.io">ix.io</a></li>
+										<li><a href="https://noez.de">noez</a></li>
+										<li><a href="https://docs.google.com/spreadsheets/u/0/">sheets</a></li>
+										<li><a href="https://fast.com">fast</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div id="imgcont">
+							<img id="image" src="img/12.jpg" onclick="updateImage()">
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<audio id="player" src="https://lainon.life/radio/cyberia.ogg" controls></audio>
+		<div id="bar">
+			<table id="table2" style="width:100%">
+				<tbody>
+					<tr>
+						<td class="bottomtd">
+							<!-- music -->
+						<span style="margin-left: 10px;">channel: </span>
+						<select id="selection">
+							<option value="http://cyberadio.pw:8000/stream">cyberadio</option>
+							<option value="https://lainon.life/radio/cafe.ogg">lainon/cafe</option>
+							<option value="https://lainon.life/radio/cyberia.ogg" selected>lainon/cyberia</option>
+							<option value="https://lainon.life/radio/everything.ogg">lainon/everything</option>
+						</select>
+						<button onclick="player.play()">play</button>
+						<button onclick="player.pause()">pause</button>
+						<button onclick="reload()">reload</button>
+						</td>
+						<td class="bottomtd" style="text-align: right";>
+							<!-- weather and time -->
+							<span id="weather"></span>
+							<span id="date"></span>
+							<span style="margin-right: 10px;" id="clock"></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<script src="script.js"></script>
+	</body>
 </html>

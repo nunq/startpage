@@ -1,51 +1,53 @@
 "use strict";
 
+const c = document.getElementById("clock");
+const d = document.getElementById("date");
 const p = document.getElementById("player");
 const s = document.getElementById("search");
-const c = document.getElementById("clock");
 const w = document.getElementById("weather");
+const months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+const weekdays = ["sunday", "tuesday", "wednesday", "thursday", "friday", "saturday", "monday"];
 var isSearch = true;
-
+var d8 = new Date();
 p.controls = false;
 
 document.addEventListener("DOMContentLoaded", function() {
 	getWeather();
-  s.value = "";
+	s.value = "";
 }, false);
 
 function reload() {
 	var url = document.getElementById("selection").value;
 	p.src = url;
-  p.load();
-  p.play();
+	p.load();
+	p.play();
 }
 
 if(s.addEventListener ) {
-  s.addEventListener("keydown", this.keyHandler, false);
+	s.addEventListener("keydown", this.keyHandler, false);
 }
 
 function keyHandler(e) {
-  if(e.keyCode === 9) {
-    if(isSearch) {
-      isSearch = false;
-      this.placeholder = "type a url...";
-    } else if (!isSearch) {
-      isSearch = true;
-      this.placeholder = "search the web...";
-    }
-    if(e.preventDefault) {
-      e.preventDefault();
-    }
-  }
-  if(e.keyCode === 13) {
-    if(isSearch) {
-      window.location.href = "https://duckduckgo.com/?q=" + this.value;
-    } else {
-      window.location.href = this.value;
-    }
-  }
+	if(e.keyCode === 9) {
+		if(isSearch) {
+			isSearch = false;
+			this.placeholder = "type a url...";
+		} else if (!isSearch) {
+			isSearch = true;
+			this.placeholder = "search the web...";
+		}
+		if(e.preventDefault) {
+			e.preventDefault();
+		}
+	}
+	if(e.keyCode === 13) {
+		if(isSearch) {
+			window.location.href = "https://duckduckgo.com/?q=" + this.value;
+		} else {
+			window.location.href = "https://" + this.value;
+		}
+	}
 }
-
 
 function updateClock() {
 	let currentTime = new Date();
@@ -59,8 +61,16 @@ function updateClock() {
 	c.innerHTML = currentTimeString;
 }
 
+function setDate() {
+	let cDay = weekdays[d8.getDay()];
+	let cNumDay = d8.getDate();
+	let cMonth = months[d8.getMonth()];
+	let cYear = d8.getFullYear();
+	d.innerHTML = cDay + ", " + cMonth + " " + cNumDay + " " + cYear;
+}
+
 function updateImage() { // update image names in dir: ls -v | cat -n | while read n f; do mv -n "$f" "$n.jpg"; done
-	document.getElementById("image").src = "img/" +  Math.floor((Math.random() * 24)+1)  + ".jpg";
+	document.getElementById("image").src = "img/" + Math.floor((Math.random() * 24)+1) + ".jpg";
 }
 
 function getWeather() {
@@ -76,10 +86,13 @@ function weatherJson(position) {
 		return response.json();
 	})
 	.then(function(retjson) {
-		w.innerHTML = retjson.name + ": " + retjson.weather[0].description + " " + Math.round(retjson.main.temp)+"°C";
+		w.innerHTML = retjson.weather[0].description + " " + Math.round(retjson.main.temp)+"°C";
 	});
 }
 
+setDate();
+updateClock();
 updateImage();
 setInterval(updateClock, 1000);
 setInterval(updateImage, 60000);
+setInterval(getWeather, 600000);
