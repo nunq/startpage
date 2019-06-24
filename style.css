@@ -44,7 +44,7 @@ ul > li > a {
 }
 
 @media only screen and (max-width: 1250px) {
-	#imgcont, #weather {
+	#imgcont, #weather, #date {
 		display: none;
 	}
 	#table {
