@@ -70,7 +70,7 @@ function setDate() {
 }
 
 function updateImage() { // update image names in dir: ls -v | cat -n | while read n f; do mv -n "$f" "$n.jpg"; done
-	document.getElementById("image").src = "img/" + Math.floor((Math.random() * 24)+1) + ".jpg";
+	document.getElementById("image").src = "img/" + Math.floor((Math.random() * 23)+1) + ".jpg";
 }
 
 function getWeather() {
