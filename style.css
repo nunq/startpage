@@ -1,8 +1,9 @@
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
 * {
 	-webkit-tap-highlight-color: black !important;
 	-webkit-focus-ring-color: black !important;
 	outline: none !important;
-	font-family: monospace;
+  font-family: "Fira Code", monospace;
 	font-size: 20px;
 	background-color: #2d2d2d;
 	color: #ccc;
@@ -140,4 +141,13 @@ ul > li > a {
 	appearance:none;
 	padding: 0 2px;
 	border: none;
+}
+
+@media only screen and (max-height: 600px) {
+  #table {
+    margin-top: 1em;
+  }
+  #container {
+    padding-top: 1em;
+  }
 }
