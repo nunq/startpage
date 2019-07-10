@@ -8,13 +8,13 @@ although the noscript version can be functional as well.
 
 the image is refreshed every minute, the weather every 10 minutes.
 
-the default mode for the search bar is, well, a web search (using
-duckduckgo). if you press tab, you can enter a https:// url. tab
-again to switch to search mode again (and so on...).
+the search bar doubles as a url bar and redirects to a url if it
+detects a scheme suffix ("://"). normal search queries are
+forwarded to duckduckgo.
 
 the default music channel is cyberia (https://lainon.life), other
 music channels from lainon.life are 'cafe' and 'everything', you
-can also listen to the stream from http://cyberadio.pw .
+can also listen to the stream from cyberadio.pw, among others.
 to start playing click 'play', if you select another channel, you
 need to click 'reload'.
 

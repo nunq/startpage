@@ -28,25 +28,13 @@ if(s.addEventListener ) {
 }
 
 function keyHandler(e) {
-	if(e.keyCode === 9) {
-		if(isSearch) {
-			isSearch = false;
-			this.placeholder = "type a url...";
-		} else if (!isSearch) {
-			isSearch = true;
-			this.placeholder = "search the web...";
-		}
-		if(e.preventDefault) {
-			e.preventDefault();
-		}
-	}
 	if(e.keyCode === 13) {
-		if(isSearch) {
-			window.location.href = "https://duckduckgo.com/?q=" + this.value;
-		} else {
-			window.location.href = "https://" + this.value;
-		}
-	}
+    if (this.value.indexOf("://") != -1) {
+      window.location.href = this.value;
+    } else {
+      window.location.href = "https://duckduckgo.com/?q=" + this.value;
+    }
+  }
 }
 
 function updateClock() {
