@@ -31,7 +31,7 @@ function keyHandler(e) {
 		} else {
 			if(this.value.search(/[a-z\A-Z\0-9\:\-\@]*?\.[a-z]{2,3}/gi) != -1) {
 				window.location.href = "https://" + this.value;
-			} else {
+			} else if(this.value != "") {
 				window.location.href = "https://duckduckgo.com/?q=" + this.value;
 			}
 		}
