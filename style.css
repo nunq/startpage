@@ -1,9 +1,14 @@
-@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
+@font-face {
+	font-family: "Fira Code";
+	src: url("font/firacode.woff2") format("woff2"), url("font/firacode.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
 * {
 	-webkit-tap-highlight-color: black !important;
 	-webkit-focus-ring-color: black !important;
 	outline: none !important;
-  font-family: "Fira Code", monospace;
+	font-family: "Fira Code", monospace;
 	font-size: 20px;
 	background-color: #2d2d2d;
 	color: #ccc;
@@ -118,10 +123,10 @@ ul > li > a {
 	border: none;
 }
 @media only screen and (max-height: 600px) {
-  #table {
-    margin-top: 1em;
-  }
-  #container {
-    padding-top: 1em;
-  }
+	#table {
+		margin-top: 1em;
+	}
+	#container {
+		padding-top: 1em;
+	}
 }
