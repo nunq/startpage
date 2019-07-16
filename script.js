@@ -6,9 +6,7 @@ const p = document.getElementById("player");
 const s = document.getElementById("search");
 const w = document.getElementById("weather");
 const months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
-const weekdays = ["sunday", "tuesday", "wednesday", "thursday", "friday", "saturday", "monday"];
-var isSearch = true;
-var d8 = new Date();
+const weekdays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 p.controls = false;
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -17,39 +15,39 @@ document.addEventListener("DOMContentLoaded", function() {
 }, false);
 
 function reload() {
-	var url = document.getElementById("selection").value;
-	p.src = url;
+	p.src = document.getElementById("selection").value;
 	p.load();
 	p.play();
 }
 
-if(s.addEventListener ) {
+if(s.addEventListener) {
 	s.addEventListener("keydown", this.keyHandler, false);
 }
 
 function keyHandler(e) {
 	if(e.keyCode === 13) {
-    if (this.value.indexOf("://") != -1) {
-      window.location.href = this.value;
-    } else {
-      window.location.href = "https://duckduckgo.com/?q=" + this.value;
-    }
-  }
+		if(this.value.indexOf("://") != -1) {
+			window.location.href = this.value;
+		} else {
+			if(this.value.search(/[a-z\A-Z\0-9\:\-\@]*?\.[a-z]{2,3}/gi) != -1) {
+				window.location.href = "https://" + this.value;
+			} else {
+				window.location.href = "https://duckduckgo.com/?q=" + this.value;
+			}
+		}
+	}
 }
 
 function updateClock() {
-	let currentTime = new Date();
-	let currentHours = currentTime.getHours();
-	let currentMinutes = currentTime.getMinutes();
-	let currentSeconds = currentTime.getSeconds();
-	currentHours = (currentHours < 10 ? "0" : "") + currentHours;
-	currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
-	currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
-	let currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;
-	c.innerHTML = currentTimeString;
+  let d8 = new Date(); //setInterval() somehow can't access global vars
+	let cHours = (d8.getHours() < 10 ? "0" : "") + d8.getHours();
+	let cMinutes = (d8.getMinutes() < 10 ? "0" : "") + d8.getMinutes();
+	let cSeconds = (d8.getSeconds() < 10 ? "0" : "") + d8.getSeconds();
+	c.innerHTML = cHours + ":" + cMinutes + ":" + cSeconds;
 }
 
 function setDate() {
+  let d8 = new Date();
 	let cDay = weekdays[d8.getDay()];
 	let cNumDay = d8.getDate();
 	let cMonth = months[d8.getMonth()];
@@ -62,7 +60,7 @@ function updateImage() { // update image names in dir: ls -v | cat -n | while re
 }
 
 function getWeather() {
-	if (navigator.geolocation) {
+	if(navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(weatherJson);
 	} else {
 		console.log("geolocation is not supported.");
