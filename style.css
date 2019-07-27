@@ -115,6 +115,18 @@ ul > li > a {
 	background-color: #222;
 	height: 2em;
 }
+#table, #table2 {
+  width: 100%;
+}
+#clabel {
+  margin-left: 10px;
+}
+#clock {
+  margin-right: 10px;
+}
+#inforight {
+  text-align: right;
+}
 #selection {
 	-moz-appearance:none;
 	-webkit-appearance:none;
