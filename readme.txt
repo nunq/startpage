@@ -25,6 +25,9 @@ the site needs access to your location to display current weather
 conditions near you (uses the openweathermap api).
 if you don't choose to allow this, the div will simply be hidden.
 
+the images are webp files and some music streams are in ogg format
+so browser compatibility may vary (helpful: https://caniuse.com).
+
 suggestions, bugs, etc. -> https://github.com/hyphenc/startpage
 
 -----------------
