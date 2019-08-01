@@ -55,8 +55,8 @@ function setDate() {
 	d.innerHTML = cDay + ", " + cMonth + " " + cNumDay + " " + cYear;
 }
 
-function updateImage() { // update image names in dir: ls -v | cat -n | while read n f; do mv -n "$f" "$n.jpg"; done
-	document.getElementById("image").src = "img/" + Math.floor((Math.random() * 32)+1) + ".webp";
+function updateImage() { // update image names in dir: ls -v | cat -n | while read n f; do mv -n "$f" "$n.webp"; done
+	document.getElementById("image").src = "img/" + Math.floor((Math.random() * 41)+1) + ".webp";
 }
 
 function getWeather() {
