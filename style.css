@@ -7,14 +7,29 @@
 * {
 	-webkit-tap-highlight-color: black !important;
 	-webkit-focus-ring-color: black !important;
-	outline: none !important;
 	font-family: "Fira Code", monospace;
 	font-size: 20px;
 	background-color: #2d2d2d;
 	color: #ccc;
 }
 button {
-	border: none;
+  border: none;
+}
+button:focus {
+  outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #ccc;
+}
+option {
+  text-shadow: none;
+}
+option:not(:checked) {
+  color: #ccc;
 }
 body {
 	width: 100%;
@@ -127,9 +142,9 @@ ul > li > a {
 	text-align: right;
 }
 #selection {
-	-moz-appearance:none;
-	-webkit-appearance:none;
-	appearance:none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
 	padding: 0 2px;
 	border: none;
 }
