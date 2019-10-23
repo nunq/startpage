@@ -1,14 +1,14 @@
 @font-face {
 	font-family: "Fira Code";
-	src: url("font/firacode.woff2") format("woff2"), url("font/firacode.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
+	src:local("Fira Code Regular"),
+      url("font/firacode.woff2") format("woff2"),
+      url("font/firacode.woff") format("woff");
 }
 * {
 	-webkit-tap-highlight-color: black !important;
 	-webkit-focus-ring-color: black !important;
 	outline: none !important;
-	font-family: "Fira Code", monospace;
+  font-family: "Fira Code", monospace;
 	font-size: 20px;
 	background-color: #2d2d2d;
 	color: #ccc;
@@ -36,7 +36,6 @@ ul > li > a:hover {
 }
 ul > li > a {
 	color: #bebebe;
-	outline: none;
 	display: block;
 	text-decoration: none;
 	text-align: left;
