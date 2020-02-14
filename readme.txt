@@ -15,8 +15,6 @@ repo: https://github.com/hyphenc/startpage
 
 * if you select a different music channel, click 'reload'.
 
-* uses geolocation to get current weather conditions (openweathermap).
-
 * browser compatibility may vary (uses webp, ogg)
 
 -----------------

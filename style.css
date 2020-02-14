@@ -55,7 +55,7 @@ ul > li > a {
 	padding: 0.5rem;
 }
 @media only screen and (max-width: 1250px) {
-	#imgcont, #weather, #date {
+	#imgcont, #date {
 		display: none;
 	}
 	#table {

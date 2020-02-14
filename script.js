@@ -4,13 +4,11 @@ const c = document.getElementById("clock");
 const d = document.getElementById("date");
 const p = document.getElementById("player");
 const s = document.getElementById("search");
-const w = document.getElementById("weather");
 const months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
 const weekdays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 p.controls = false;
 
 document.addEventListener("DOMContentLoaded", function() {
-	getWeather();
 	s.value = "";
 }, false);
 
@@ -60,26 +58,8 @@ function updateImage() {
 	document.getElementById("image").src = "img/" + Math.floor((Math.random() * 39)+1) + ".webp";
 }
 
-function getWeather() {
-	if(navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(weatherJson);
-	} else {
-		console.log("geolocation is not supported.");
-	}
-}
-
-function weatherJson(position) {
-	fetch("https://api.openweathermap.org/data/2.5/weather?lat="+position.coords.latitude+"&lon="+position.coords.longitude+"&APPID=e2ddfc3c180199dacc17d6692caed19e&units=metric").then(function(response) {
-		return response.json();
-	})
-	.then(function(retjson) {
-		w.innerHTML = retjson.weather[0].description + " " + Math.round(retjson.main.temp)+"°C";
-	});
-}
-
 updateImage();
 setDate();
 updateClock();
 setInterval(updateClock, 1000);
 setInterval(updateImage, 60000);
-setInterval(getWeather, 600000);
