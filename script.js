@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	s.value = "";
 }, false);
 
-function reload() {
+function play() {
 	p.src = document.getElementById("selection").value;
 	p.load();
 	p.play();

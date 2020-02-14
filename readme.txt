@@ -13,8 +13,6 @@ repo: https://github.com/hyphenc/startpage
   if url but no :// -> prefix https:// and redirect
   else forward query to duckduckgo
 
-* if you select a different music channel, click 'reload'.
-
 * browser compatibility may vary (uses webp, ogg)
 
 -----------------
