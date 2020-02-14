@@ -10,15 +10,6 @@
 	background-color: #2d2d2d;
 	color: #ccc;
 }
-button {
-  border: none;
-}
-button:focus {
-  outline: none;
-}
-button::-moz-focus-inner {
-  border: 0;
-}
 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #ccc;

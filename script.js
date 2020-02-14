@@ -41,7 +41,7 @@ function updateClock() {
 	let cHours = (d8.getHours() < 10 ? "0" : "") + d8.getHours();
 	let cMinutes = (d8.getMinutes() < 10 ? "0" : "") + d8.getMinutes();
 	let cSeconds = (d8.getSeconds() < 10 ? "0" : "") + d8.getSeconds();
-	c.innerHTML = cHours + ":" + cMinutes + ":" + cSeconds;
+	c.innerHTML = "&nbsp;" + cHours + ":" + cMinutes + ":" + cSeconds + "&nbsp;";
 }
 
 function setDate() {
@@ -50,7 +50,7 @@ function setDate() {
 	let cNumDay = d8.getDate();
 	let cMonth = months[d8.getMonth()];
 	let cYear = d8.getFullYear();
-	d.innerHTML = cDay + ", " + cMonth + " " + cNumDay + " " + cYear;
+	d.innerHTML = "&nbsp;" + cDay + ", " + cMonth + " " + cNumDay + " " + cYear + "&nbsp;";
 }
 
 function updateImage() {
