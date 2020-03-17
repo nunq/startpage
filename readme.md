@@ -6,6 +6,8 @@ my /comfy/ startpage
 
 * the page needs js for basic functionality, the noscript version is
   barely functional.
+  
+* geolocation is used to get current weather conditions (openweathermap api)
 
 * the image is refreshed every minute, the weather every 10 minutes.
 
