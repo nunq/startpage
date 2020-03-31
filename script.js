@@ -73,7 +73,7 @@ function weatherJson(position) {
 		return response.json();
 	})
 	.then(function(retjson) {
-		w.innerHTML = retjson.weather[0].description + " " + Math.round(retjson.main.temp)+"°C";
+		w.innerHTML = "&nbsp;" + retjson.weather[0].description + " " + Math.round(retjson.main.temp)+"°C" + "&nbsp;";
 	});
 }
 
