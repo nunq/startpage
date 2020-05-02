@@ -136,6 +136,7 @@ ul > li > a {
 	appearance: none;
 	padding: 0 2px;
 	border: none;
+  line-height: 1.2;
 }
 @media only screen and (max-height: 600px) {
 	#table {
