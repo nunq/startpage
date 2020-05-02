@@ -1,14 +1,14 @@
 @font-face {
-	font-family: "Fira Code";
-	src:local("Fira Code Regular"),
-		url("font/firacode.woff2") format("woff2"),
-		url("font/firacode.woff") format("woff");
+  font-family: "Fira Code";
+  src:local("Fira Code Regular"),
+  url("font/firacode.woff2") format("woff2"),
+  url("font/firacode.woff") format("woff");
 }
 * {
-	font-family: "Fira Code", monospace;
-	font-size: 20px;
-	background-color: #2d2d2d;
-	color: #ccc;
+  font-family: "Fira Code", monospace;
+  font-size: 20px;
+  background-color: #2d2d2d;
+  color: #ccc;
 }
 select:-moz-focusring {
   color: transparent;
@@ -21,128 +21,128 @@ option:not(:checked) {
   color: #ccc;
 }
 body {
-	width: 100%;
-	height: 100%;
-	margin: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 ul {
-	list-style: none;
-	padding: 0;
+  list-style: none;
+  padding: 0;
 }
 ul > li > p {
-	font-weight: bold;
-	text-align: left;
-	padding-right: 100%;
+  font-weight: bold;
+  text-align: left;
+  padding-right: 100%;
 }
 ul > li > a:hover {
-	color: #2d2d2d;
-	background-color: #ccc;
+  color: #2d2d2d;
+  background-color: #ccc;
 }
 ul > li > a {
-	color: #bebebe;
-	display: block;
-	text-decoration: none;
-	text-align: left;
-	padding: 0.5rem;
+  color: #bebebe;
+  display: block;
+  text-decoration: none;
+  text-align: left;
+  padding: 0.5rem;
 }
 @media only screen and (max-width: 1250px) {
-	#imgcont, #weather, #date {
-		display: none;
-	}
-	#table {
-		margin-top: 25%;
-	}
-	.left {
-		margin-left: 10cm;
-	}
+  #imgcont, #weather, #date {
+    display: none;
+  }
+  #table {
+    margin-top: 25%;
+  }
+  .left {
+    margin-left: 10cm;
+  }
 }
 .left {
-	margin-left: 10%;
+  margin-left: 10%;
 }
 .col {
-	text-align: left;
-	width: 10rem;
-	margin-right: 2rem;
+  text-align: left;
+  width: 10rem;
+  margin-right: 2rem;
 }
 .bottomtd, #table2 {
-	margin-top: 0.2em;
-	background-color: #222;
+  margin-top: 0.2em;
+  background-color: #222;
 }
 #imgcont {
-	margin-right: 10%;
-	margin-top: 4em;
-	margin-bottom: 4em;
-	margin-left: 3em;
+  margin-right: 10%;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  margin-left: 3em;
 }
 #image {
-	width: 650px;
-	height: 650px;
-	border: 10px solid #eee;
-	box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.2), 0 10px 28px 0 rgba(0, 0, 0, 0.19);
-	opacity: 0.9;
-	object-fit: cover;
-	max-width: 100%;
+  width: 650px;
+  height: 650px;
+  border: 10px solid #eee;
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.2), 0 10px 28px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0.9;
+  object-fit: cover;
+  max-width: 100%;
 }
 #container {
-	padding-top: 5em;
-	display: flex;
-	flex-direction: column;
-	display: -webkit-flex;
-	-webkit-flex-direction: column;
+  padding-top: 5em;
+  display: flex;
+  flex-direction: column;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
 }
 #search {
-	padding: 0;
-	padding-left: 1%;
-	font-size: 1.3em;
-	line-height: 1.8em;
-	width: 25em;
-	border: 0;
-	outline: 0;
-	background: transparent;
-	border-bottom: 1px solid #ccc;
+  padding: 0;
+  padding-left: 1%;
+  font-size: 1.3em;
+  line-height: 1.8em;
+  width: 25em;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #ccc;
 }
 #searchbox {
-	margin-top: 0;
+  margin-top: 0;
 }
 #links {
-	display: flex;
-	flex-direction: row;
-	display: -webkit-flex;
-	-webkit-flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
 }
 #bar {
-	position: fixed;
-	bottom: 0;
-	overflow: hidden;
-	width: 100%;
-	background-color: #222;
-	height: 2em;
+  position: fixed;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+  background-color: #222;
+  height: 2em;
 }
 #table, #table2 {
-	width: 100%;
+  width: 100%;
 }
 #clabel {
-	margin-left: 10px;
+  margin-left: 10px;
 }
 #clock {
-	margin-right: 10px;
+  margin-right: 10px;
 }
 #inforight {
-	text-align: right;
+  text-align: right;
 }
 #selection {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	appearance: none;
-	padding: 0 2px;
-	border: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0 2px;
+  border: none;
   line-height: 1.2;
 }
 @media only screen and (max-height: 600px) {
-	#table {
-		margin-top: 1em;
-	}
-	#container {
-		padding-top: 1em;
-	}
+  #table {
+    margin-top: 1em;
+  }
+  #container {
+    padding-top: 1em;
+  }
 }

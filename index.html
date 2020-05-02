@@ -1,106 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>/home/</title>
-		<link rel="stylesheet" href="style.css">
-		<script defer src="script.js"></script>
-		<meta charset="utf-8">
-	</head>
-	<body>
-		<noscript><style>
-			#bar, #search {
-				display: none;
-			}
-			#container {
-				margin-top: -4em;
-			}
-		</style></noscript>
-		<table id="table">
-			<tbody>
-				<tr>
-					<td>
-						<div class="left" id="searchbox">
-								<input id="search" type="text" placeholder="search the web or type a url..." autofocus>
-						</div>
-						<div class="left" id="container">
-							<div id="links">
-								<div class="col">
-									<ul>
-										<li>
-											<p>productivity</p>
-										</li>
-										<li><a href="https://yx7.de:8443/apps/notes">notes</a></li>
-										<li><a href="https://hackmd.io">hackmd</a></li>
-										<li><a href="https://calendar.google.com/calendar/r/week">calendar</a></li>
-										<li><a href="https://github.com">github</a></li>
-										<li><a href="https://yx7.de:8443/apps/mail">mail</a></li>
-									</ul>
-								</div>
-								<div class="col">
-									<ul>
-										<li>
-											<p>media</p>
-										</li>
-										<li><a href="https://www.youtube.com/playlist?list=WL">youtube</a></li>
-										<li><a href="https://www.twitch.tv/directory/following">twitch</a></li>
-										<li><a href="https://goodreads.com">goodreads</a></li>
-										<li><a href="https://web.whatsapp.com">whatsapp</a></li>
-										<li><a href="https://www.inoreader.com/">inoreader</a></li>
-									</ul>
-								</div>
-								<div class="col">
-									<ul>
-										<li>
-											<p>other</p>
-										</li>
-										<li><a href="https://gist.github.com">gist</a></li>
-										<li><a href="https://overleaf.com">overleaf</a></li>
-										<li><a href="https://yx7.de:8443/apps/bookmarks/">saved</a></li>
-										<li><a href="https://docs.google.com/spreadsheets/">sheets</a></li>
-										<li><a href="https://nas.noez.io">noez</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div id="imgcont">
-							<img id="image" src="" alt="loading... (needs js)" onclick="updateImage()">
-						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-		<audio id="player" preload="none" src="https://lainon.life/radio/cyberia.ogg" controls></audio>
-		<div id="bar">
-			<table id="table2">
-				<tbody>
-					<tr>
-						<td class="bottomtd">
-							<!-- music -->
-						<span id="clabel">&nbsp;channel: </span>
-						<select id="selection">
-							<option value="https://lainon.life/radio/cafe.ogg">cafe</option>
-							<option value="http://cyberadio.pw:8000/stream">cyberadio</option>
-							<option value="http://ice1.somafm.com/deepspaceone-128-mp3">deep space</option>
-              <option value="https://lainon.life/radio/cyberia.ogg" selected>cyberia</option>
-							<option value="https://lainon.life/radio/everything.ogg">everything</option>
-							<option value="http://ice4.somafm.com/gsclassic-128-mp3">gs classic</option>
-							<option value="http://radio.dangeru.us:8000/stream.ogg">radi/u/</option>
-							<option value="http://ice1.somafm.com/thetrip-128-mp3">the trip</option>
-						</select>
-						<label onclick="play()">&nbsp;play&nbsp;</label>
-						<label onclick="player.pause()">&nbsp;pause&nbsp;</label>
-						</td>
-						<td class="bottomtd" id="inforight">
-							<!-- weather and time -->
-							<span id="weather"></span>
-							<span id="date"></span>
-							<span id="clock"></span>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</body>
+  <head>
+    <title>/home/</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <noscript><style>
+#bar, #search {
+  display: none;
+}
+#container {
+  margin-top: -4em;
+}
+    </style></noscript>
+    <table id="table">
+      <tbody>
+        <tr>
+          <td>
+            <div class="left" id="searchbox">
+              <input id="search" type="text" placeholder="search the web or type a url..." autofocus>
+            </div>
+            <div class="left" id="container">
+              <div id="links">
+                <div class="col">
+                  <ul>
+                    <li>
+                      <p>productivity</p>
+                    </li>
+                    <li><a href="https://yx7.de:8443/apps/notes">notes</a></li>
+                    <li><a href="https://hackmd.io">hackmd</a></li>
+                    <li><a href="https://calendar.google.com/calendar/r/week">calendar</a></li>
+                    <li><a href="https://github.com">github</a></li>
+                    <li><a href="https://yx7.de:8443/apps/mail">mail</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <ul>
+                    <li>
+                      <p>media</p>
+                    </li>
+                    <li><a href="https://www.youtube.com/playlist?list=WL">youtube</a></li>
+                    <li><a href="https://www.twitch.tv/directory/following">twitch</a></li>
+                    <li><a href="https://goodreads.com">goodreads</a></li>
+                    <li><a href="https://web.whatsapp.com">whatsapp</a></li>
+                    <li><a href="https://www.inoreader.com/">inoreader</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <ul>
+                    <li>
+                      <p>other</p>
+                    </li>
+                    <li><a href="https://gist.github.com">gist</a></li>
+                    <li><a href="https://overleaf.com">overleaf</a></li>
+                    <li><a href="https://yx7.de:8443/apps/bookmarks/">saved</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/">sheets</a></li>
+                    <li><a href="https://nas.noez.io">noez</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div id="imgcont">
+              <img id="image" src="" alt="loading... (needs js)" onclick="updateImage()">
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <audio id="player" preload="none" src="https://lainon.life/radio/cyberia.ogg" controls></audio>
+    <div id="bar">
+      <table id="table2">
+        <tbody>
+          <tr>
+            <td class="bottomtd">
+              <!-- music -->
+              <span id="clabel">&nbsp;channel: </span>
+              <select id="selection">
+                <option value="https://lainon.life/radio/cafe.ogg">cafe</option>
+                <option value="http://cyberadio.pw:8000/stream">cyberadio</option>
+                <option value="http://ice1.somafm.com/deepspaceone-128-mp3">deep space</option>
+                <option value="https://lainon.life/radio/cyberia.ogg" selected>cyberia</option>
+                <option value="https://lainon.life/radio/everything.ogg">everything</option>
+                <option value="http://ice4.somafm.com/gsclassic-128-mp3">gs classic</option>
+                <option value="http://radio.dangeru.us:8000/stream.ogg">radi/u/</option>
+                <option value="http://ice1.somafm.com/thetrip-128-mp3">the trip</option>
+              </select>
+              <label onclick="play()">&nbsp;play&nbsp;</label>
+              <label onclick="player.pause()">&nbsp;pause&nbsp;</label>
+            </td>
+            <td class="bottomtd" id="inforight">
+              <!-- weather and time -->
+              <span id="weather"></span>
+              <span id="date"></span>
+              <span id="clock"></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
 </html>
