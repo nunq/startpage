@@ -138,6 +138,9 @@ ul > li > a {
   border: none;
   line-height: 1.2;
 }
+select {
+  padding: 1px 0 !important;
+}
 @media only screen and (max-height: 600px) {
   #table {
     margin-top: 1em;
