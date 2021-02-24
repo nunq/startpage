@@ -19,6 +19,7 @@ else forward query to duckduckgo
 ```
 
 * browser compatibility may vary (uses webp, ogg)
+* doesn't work at all on mobile and probably will never.
 
 ---
 
