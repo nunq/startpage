@@ -52,7 +52,9 @@ function setDate() {
 
 function updateImage() {
   // update image names in dir: ls -v | cat -n | while read n f; do mv -n "$f" "$n.avif"; done
-  document.getElementById("image").src = "img/" + Math.floor((Math.random() * 39)+1) + ".avif";
+  let rnd = Math.floor((Math.random() * 39)+1);
+  let fileext = (rnd>27 && rnd<31) ? ".webp" : ".avif";
+  document.getElementById("image").src = "img/" + rnd + fileext;
 }
 
 function getWeather() {
