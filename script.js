@@ -9,11 +9,6 @@ const months = ["january", "february", "march", "april", "may", "june", "july", 
 const weekdays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 p.controls = false;
 
-document.addEventListener("DOMContentLoaded", function() {
-  getWeather();
-  s.value = "";
-}, false);
-
 function play() {
   p.src = document.getElementById("selection").value;
   p.load();
@@ -77,9 +72,11 @@ function weatherJson(position) {
     });
 }
 
+s.value = "";
 updateImage();
 setDate();
 updateClock();
+getWeather();
 setInterval(updateClock, 1000);
 setInterval(updateImage, 60000);
 setInterval(getWeather, 600000);
