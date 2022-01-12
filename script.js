@@ -56,8 +56,8 @@ function setDate() {
 }
 
 function updateImage() {
-  // update image names in dir: ls -v | cat -n | while read n f; do mv -n "$f" "$n.webp"; done
-  document.getElementById("image").src = "img/" + Math.floor((Math.random() * 39)+1) + ".webp";
+  // update image names in dir: ls -v | cat -n | while read n f; do mv -n "$f" "$n.avif"; done
+  document.getElementById("image").src = "img/" + Math.floor((Math.random() * 39)+1) + ".avif";
 }
 
 function getWeather() {
