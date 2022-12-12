@@ -52,8 +52,8 @@ function setDate() {
 
 function updateImage() {
   // update image names in dir: ls -v | cat -n | while read n f; do mv -n "$f" "$n.avif"; done
-  let rnd = Math.floor((Math.random() * 39)+1);
-  let fileext = (rnd>36 && rnd<40) ? ".webp" : ".avif";
+  let rnd = Math.floor((Math.random() * 32)+1);
+  let fileext = (rnd>30 && rnd<33) ? ".webp" : ".avif";
   document.getElementById("image").src = "img/" + rnd + fileext;
 }
 
