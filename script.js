@@ -80,5 +80,4 @@ setDate();
 updateClock();
 getWeather();
 setInterval(updateClock, 1000); //1sec
-setInterval(updateImage, 180000); //3min
 setInterval(getWeather, 900000); //15 min
