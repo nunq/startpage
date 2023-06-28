@@ -26,5 +26,5 @@ else forward query to duckduckgo
 dark mode:
 <img src="screenshot.png" alt="screenshot dark mode"/>
 
-light mode: (use [this](https://gist.github.com/hyphenc/bd1cb30307d31655827d5d1428538ba5) css file, for example with stylus)
+light mode: (use [this](https://gist.github.com/nunq/bd1cb30307d31655827d5d1428538ba5) css file, for example with stylus)
 <img src="screenshot-lightmode.png " alt="screenshot light mode"/>
