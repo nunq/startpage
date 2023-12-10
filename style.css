@@ -50,7 +50,7 @@ ul > li > a {
     display: none;
   }
   #table {
-    margin-top: 25%;
+    margin-top: 25% !important;
   }
   .left {
     margin-left: 10cm;
@@ -120,6 +120,9 @@ ul > li > a {
 }
 #table, #table2 {
   width: 100%;
+}
+#table {
+  margin-top: 5%;
 }
 #clabel {
   margin-left: 10px;
