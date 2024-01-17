@@ -12,6 +12,7 @@ p.controls = false;
 function play() {
   p.src = document.getElementById("selection").value;
   p.load();
+  p.volume = 0.15;
   p.play();
 }
 
